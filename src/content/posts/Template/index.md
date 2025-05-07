@@ -1,11 +1,10 @@
 ---
-title: Simple Guides for Fuwari
-published: 2024-04-01
-description: "How to use this blog template."
-image: "./cover.jpeg"
-tags: ["Fuwari", "Blogging", "Customization"]
-category: Guides
-draft: false
+title: Exemplos
+published: 2025-05-06
+description: "Template para utilizar no blog."
+image: "./banner.png"
+category: Template
+draft: true
 ---
 
 > Cover image source: [Source](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg)
@@ -49,3 +48,99 @@ src/content/posts/
     ├── cover.png
     └── index.md
 ```
+
+---
+
+## GitHub Repository Cards
+You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API. 
+
+::github{repo="Fabrizz/MMM-OnSpotify"}
+
+Create a GitHub repository card with the code `::github{repo="<owner>/<repo>"}`.
+
+```markdown
+::github{repo="saicaca/fuwari"}
+```
+
+## Admonitions
+
+Following types of admonitions are supported: `note` `tip` `important` `warning` `caution`
+
+:::note
+Highlights information that users should take into account, even when skimming.
+:::
+
+:::tip
+Optional information to help a user be more successful.
+:::
+
+:::important
+Crucial information necessary for users to succeed.
+:::
+
+:::warning
+Critical content demanding immediate user attention due to potential risks.
+:::
+
+:::caution
+Negative potential consequences of an action.
+:::
+
+### Basic Syntax
+
+```markdown
+:::note
+Highlights information that users should take into account, even when skimming.
+:::
+
+:::tip
+Optional information to help a user be more successful.
+:::
+```
+
+### Custom Titles
+
+The title of the admonition can be customized.
+
+:::note[MY CUSTOM TITLE]
+This is a note with a custom title.
+:::
+
+```markdown
+:::note[MY CUSTOM TITLE]
+This is a note with a custom title.
+:::
+```
+
+### GitHub Syntax
+
+> [!TIP]
+> [The GitHub syntax](https://github.com/orgs/community/discussions/16925) is also supported.
+
+```
+> [!NOTE]
+> The GitHub syntax is also supported.
+
+> [!TIP]
+> The GitHub syntax is also supported.
+```
+
+---
+
+## Videos
+
+Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
+
+```yaml
+---
+title: Include Video in the Post
+published: 2023-10-19
+// ...
+---
+
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+```
+
+### YouTube
+
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

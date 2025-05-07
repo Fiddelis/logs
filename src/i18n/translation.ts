@@ -7,12 +7,13 @@ import { ko } from "./languages/ko";
 import { th } from "./languages/th";
 import { zh_CN } from "./languages/zh_CN";
 import { zh_TW } from "./languages/zh_TW";
+import { pt_BR } from "./languages/pt_BR";
 
 export type Translation = {
 	[K in I18nKey]: string;
 };
 
-const defaultTranslation = en;
+const defaultTranslation = pt_BR;
 
 const map: { [key: string]: Translation } = {
 	es: es,
@@ -28,6 +29,7 @@ const map: { [key: string]: Translation } = {
 	ko_kr: ko,
 	th: th,
 	th_th: th,
+	pt_BR: pt_BR
 };
 
 export function getTranslation(lang: string): Translation {
@@ -35,6 +37,6 @@ export function getTranslation(lang: string): Translation {
 }
 
 export function i18n(key: I18nKey): string {
-	const lang = siteConfig.lang || "en";
+	const lang = siteConfig.lang || "pt_BR";
 	return getTranslation(lang)[key];
 }
